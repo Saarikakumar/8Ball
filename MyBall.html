@@ -1,0 +1,86 @@
+    <head>
+      <meta charset="utf-8">
+      <meta name="description" content="Home page.">
+      <link rel="stylesheet" href="main.css">
+       <script src="8Ball.js"></script>    
+    </head>
+
+<!-- 'MyBalls' aka Home HTML file for Magic 8-Ball website interaction.
+
+          * User Docuentation also found at the bottom of the PDF labeled 'Scientific Journal and User Dcumentation' (posted again here for grading ease) *
+
+          User Documentation
+
+          Technical
+          In order to assemble our webpage, technical users must save the html, css and javascript files to their device in the same location. These are entitled MyBall.html, main.css, and 8ball.js respectively. Additional files that were used in our project include an info page (info.html), background image (colorful- galaxy.jpg), a 8-Ball outline (Circle_black_simple.svg), and an image of a magic 8 Ball (8Ballsvg.png). All these files should be stored within the same folder as the html, css, and js files are. Once all are saved in this location, the technical user can then right-click to open the MyBall.html file in any browser of their choice, and both css and javascript will already be linked to the page.
+
+          Non-technical
+          Just like the classic toy, users can ask the 8 Ball on the 'My Ball' page a question they want answered, and receive a response from the ether. In our application users write five 'fortunes' in the form provided, any of which the 8 Ball could select as a response to their question. The user then clicks ‘submit’, and after that, ‘click here for your fortune’. Immediately following this, a randomizing feature selects one response out of the five written to be displayed beneath the 'click here for your fortune' button. Your fortune has been foretold!
+ -->
+    
+<body>
+        <!-- Navigation Bar-->
+        <nav> 
+            <div class= "topnav">
+                 <a href = "Home.html"> Home</a>
+                 <a href = "Info.html"> Info</a>
+            </div>
+        </nav>
+
+        <!--svg circle that also serves as container for Triangle photo and gif-->
+        <div class= "Circle">   
+        
+            <img id="Triangle" class= "triang" src = "http://4.bp.blogspot.com/-wnpNDjG4zGo/TcjM7fpDiAI/AAAAAAAAAG4/z29OViSxgJQ/s1600/triangle.gif">   
+              
+            <img id="Trianglegif" class= "triang" src = "http://3.bp.blogspot.com/-Z_pB4nFxLJ8/Tci5aL3wyWI/AAAAAAAAAGo/wxs4k-inf7o/s1600/rot.gif" id="triangle">
+          
+        </div>
+        <!-- submission and answer div-->
+        <div class= "answercontainer">
+
+            <input type = "button" class= "button" value = "Click Here for Your Fortune" onclick = "showImage();" id= "click">
+            
+            <p id="answers" class = "ans"></p>
+
+        </div>
+
+    <!-- div to hold form and image-->
+    <div class="endofpagewrapper">
+
+      <!-- form specific div that includes submission-->
+      <div class="formentry">
+
+          <!--Prompt for user-->
+          <section>
+                    <div>
+                      <p id = "Suggest"> What could the Magic 8 Ball reveal to you? </p>
+                    </div>
+
+                    <p id= "SuggestDescription"> 
+                      Suggest possible answers to your question and have a say in your fate as revealed to you by the Magic 8 Ball
+                    </p>
+          </section>
+
+          <!--form : users enter five possible responses here-->  
+          <form id="frm1" class="formtext">
+            Fortune One: <input type="text" name="ans1"><br>
+            Fortune Two: <input type="text" name="ans2"><br>
+            Fortune Three: <input type="text" name="ans3"><br>
+            Fortune Four: <input type="text" name="ans4"><br>
+            Fortune Five: <input type="text" name="ans5"><br>
+          </form>
+
+          <!--submit form : linked to js randomization-->
+          <input type="button" onclick="myFunction()" value="Submit" id= "submit" class= "button">
+
+      <!--formentry div closure-->
+      </div>
+
+    <img src="8Ballsvg.png" alt="picture of magic 8 ball" class="8Ball" style="height: 350px; width: 350px; margin-top: 12px;"> 
+
+  <!-- end of page wrapper closure -->
+  </div>
+
+</body>
+
+     
